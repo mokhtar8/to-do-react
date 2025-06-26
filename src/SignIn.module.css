@@ -1,0 +1,91 @@
+body {
+  background-color: rgb(164, 164, 164);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.todoImg {
+  height: 557px;
+}
+
+.startp {
+  background-color: #fff;
+  width: 500px;
+  height: 557px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+      gap: 20px;
+}
+
+.emailInput{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.passwordInput{
+    height: 30px;
+    border-radius: 5px;
+}
+
+.lines{
+  display: flex;
+  align-items: center;
+}
+
+.lineImg{
+  height: 1.5px;
+  margin: 9px;
+}
+
+.buttons{
+  display: flex;
+  gap: 33px;
+}
+
+.googleBtn{
+      width: 95px;
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+        display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.facebookBtn{
+  width: 95px;
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #EBEBEB;
+        display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.signBtn {
+  background-color: #76de37;
+  width: 300px;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.signupLink{
+    color: black;
+text-decoration: unset;
+}

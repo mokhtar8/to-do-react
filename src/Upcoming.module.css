@@ -1,0 +1,311 @@
+
+body {
+  background-color:  #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+    display: flex
+;
+gap: 30px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.openMenu{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color:#F4F4F4;
+height: 549px;
+    margin-top: 12px;
+  border-radius: 35px;
+width: 320px;
+padding: 10px;
+margin: 0;
+}
+
+.menuh1{
+margin: 0;
+}
+
+.searchBar{
+ position:relative;
+ list-style-type:none;
+}
+.menuToggleButtonInside{
+  border: none;
+background-color: unset;
+cursor: pointer;
+padding: 0;
+}
+.MenuTitle{
+  display: flex;
+  gap: 150px;
+margin-left: 33px;
+height: 55px;
+    margin-top: 5px;
+    list-style-type:none;
+}
+
+.menuImgbutton{
+border: none;
+background-color: unset;
+  bottom: 225px;
+    position: relative;
+    right: 139px;
+cursor: pointer;
+
+ 
+}
+
+.menuImg{
+  width: 30px;
+}
+
+.searchimg{
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 5px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 72%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.searchInput{
+    height: 35px;
+  box-sizing:border-box;
+  padding-left: 1.5rem;
+      margin-left: 27px;
+    width: 237px;
+    margin-top: 18px;
+    border-radius: 20px;
+    border: none;
+}
+
+.tasks{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.upcomtags{
+  display: flex;
+  align-items: center;
+    margin-left: 58px;
+    gap: 3px;
+}
+
+.todaystag{
+    display: flex;
+  align-items: center;
+    margin-left: 36px;
+    gap: 3px;
+      margin-top: -25px
+}
+
+.calendartag{
+    display: flex;
+  align-items: center;
+       margin-left: 53px;
+    gap: 3px;
+       margin-top: -25px
+}
+
+.sticktag{
+    display: flex;
+  align-items: center;
+       margin-left: 70px;
+    gap: 3px;
+       margin-top:-25px
+}
+.lists{
+display: flex;
+    flex-direction: column;
+    margin-left: 57px;
+    gap: 4px;
+}
+.worktag{
+    background-color:  rgba(217, 217, 217, 0.2);
+
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.work{
+  background-color: #ff0000;
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+.Personaltag{
+    background-color:  rgba(217, 217, 217, 0.2);
+
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.Personal{
+  background-color:rgba(97, 255, 0, 1);
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+
+.Studytag{
+    background-color:  rgba(217, 217, 217, 0.2);
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.Study{
+  background-color: rgba(93, 125, 240, 1);
+
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+.addtag{
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.menuSutUp{
+      padding: 8px;
+    margin: 11px;
+ list-style-type:none;
+
+}
+
+.settingtag{
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+}
+
+.SignOuttag{
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+}
+
+
+
+/*upcoming css*/
+
+.Upcoming{
+    gap: 15px;
+ height: 580px;
+    margin: -12px;
+  display: flex;
+  flex-direction: column;
+  width: 870px;
+}
+
+.todaysec{
+width: 838px;
+height: 254px;
+border: 1px solid black;
+border-radius: 30px;
+}
+
+.addtask{
+    display: flex;
+
+}
+
+.h1today{
+    margin-left: 17px;
+}
+
+.todaysImage{
+    position: relative;
+    left: 27px;
+}
+
+.todaysInput{
+    width: 766px;
+    height: 41px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-left:  36px; ;
+}
+
+
+.towaddinput{
+    display: flex;
+    gap: 15px;
+}
+
+.tomorro{
+width: 415px;
+height: 254px;
+border: 1px solid black;
+border-radius: 30px;
+}
+
+.tomorroImage{
+   position: relative;
+    left: 27px;
+}
+
+.tomorroInput{
+    width: 340px;
+    height: 41px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-left:  36px; ;
+}
+
+.weekImage{
+       position: relative;
+    left: 27px;
+}
+
+.weekInput{
+    width: 340px;
+    height: 41px;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-left:  36px; ;
+}
+
+.TasksLink{
+    color: black;
+text-decoration: unset;
+}

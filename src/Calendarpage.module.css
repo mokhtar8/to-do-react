@@ -1,0 +1,314 @@
+body {
+  background-color:  #fff;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container {
+    display: flex
+;
+gap: 30px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.openMenu{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color:#F4F4F4;
+height: 549px;
+    margin-top: 12px;
+  border-radius: 35px;
+width: 320px;
+padding: 10px;
+margin: 0;
+}
+
+.menuh1{
+margin: 0;
+}
+
+.searchBar{
+ position:relative;
+ list-style-type:none;
+}
+.menuToggleButtonInside{
+  border: none;
+background-color: unset;
+padding: 0;
+cursor: pointer;
+}
+.MenuTitle{
+  display: flex;
+  gap: 150px;
+margin-left: 33px;
+height: 55px;
+    margin-top: 5px;
+    list-style-type:none;
+}
+
+.menuImgbutton{
+border: none;
+background-color: unset;
+    bottom: 266px;
+    position: relative;
+cursor: pointer;
+    right: 139px;
+}
+
+.menuImg{
+  width: 30px;
+}
+
+.searchimg{
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 5px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 72%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.searchInput{
+    height: 35px;
+  box-sizing:border-box;
+  padding-left: 1.5rem;
+      margin-left: 27px;
+    width: 237px;
+    margin-top: 18px;
+    border-radius: 20px;
+    border: none;
+}
+
+.tasks{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.upcomtags{
+  display: flex;
+  align-items: center;
+    margin-left: 58px;
+    gap: 3px;
+}
+
+.todaystag{
+    display: flex;
+  align-items: center;
+    margin-left: 36px;
+    gap: 3px;
+      margin-top: -25px
+}
+
+.calendartag{
+    display: flex;
+  align-items: center;
+       margin-left: 53px;
+    gap: 3px;
+       margin-top: -25px
+}
+
+.sticktag{
+    display: flex;
+  align-items: center;
+       margin-left: 70px;
+    gap: 3px;
+       margin-top:-25px
+}
+.lists{
+display: flex;
+    flex-direction: column;
+    margin-left: 57px;
+    gap: 4px;
+}
+.worktag{
+    background-color:  rgba(217, 217, 217, 0.2);
+
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.work{
+  background-color: #ff0000;
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+.Personaltag{
+    background-color:  rgba(217, 217, 217, 0.2);
+
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.Personal{
+  background-color:rgba(97, 255, 0, 1);
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+
+.Studytag{
+    background-color:  rgba(217, 217, 217, 0.2);
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.Study{
+  background-color: rgba(93, 125, 240, 1);
+
+      width: 16px;
+    height: 11px;
+    border-radius: 50px;
+}
+
+.addtag{
+    padding-left: 8px;
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+
+}
+
+.menuSutUp{
+      padding: 8px;
+    margin: 11px;
+ list-style-type:none;
+
+}
+
+.settingtag{
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+}
+
+.SignOuttag{
+    width: 184px;
+    height: 29px;
+    border-radius: 25px;
+       display: flex;
+  align-items: center;
+    gap: 13px;
+}
+
+.TasksLink{
+    color: black;
+text-decoration: unset;
+}
+
+
+/*calendar*/
+
+.calendar{
+  
+ height: 567px;
+  border-radius: 35px;
+  width: 870px;
+}
+
+
+.calendarheader{
+    display: flex
+;
+align-items: center;
+    justify-content: space-between;
+}
+
+.date{
+font-size: 36px;
+font-weight: 400;
+}
+
+.addcalendar{
+background-color: unset;
+font-size: 9px;
+font-weight: 400;
+border: 1px solid rgba(0, 0, 0, 0.4);
+width:65px ;
+height: 20px;
+border-radius: 5px;
+}
+
+.yearcal{
+    display: flex
+;
+    background-color: rgba(221, 221, 221, 1);
+    width:200px;
+    height: 29px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;  
+      gap: 15px;
+}
+
+.Day{
+    background-color: rgba(198, 198, 198, 1);
+    width: 43px;
+    height: 15px;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.Week{
+  
+    background-color:   rgba(255, 255, 255, 1);
+    width: 43px;
+    height: 15px;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.Month{
+  
+    background-color:   rgba(255, 255, 255, 1);
+     width: 50px;
+    height: 15px;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.timetable{
+    width: 838px;
+height: 388px;
+    margin-top: 36px;
+border-radius: 30px;
+border: 1px solid rgba(0, 0, 0, 0.4);
+
+}
