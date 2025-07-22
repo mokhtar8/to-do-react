@@ -15,7 +15,7 @@ return(
     <p className={styles.stayText}>Stay Organized, Get Things Done: Your Ultimate To-Do List App. <br />
 A todo list app is a digital task management <br />tool designed to help users organize and prioritize their daily activities and responsibilities.</p>
 
- <Link className={styles.signinLink} to='/Sign up' >   <button className={styles.startBtn}>Get Started</button></Link>
+ <Link className={styles.signinLink} to='/Signup' >   <button className={styles.startBtn}>Get Started</button></Link>
 <p>Already have an account? <Link className={styles.signinLink} to='/Sign In'>Sign In</Link></p>
 </div>
       </div>

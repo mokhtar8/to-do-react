@@ -18,7 +18,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Homep/>} />
             <Route path="/Sign In" element={<SignIn/>} />
-            <Route path="/Sign up" element={<Signup/>} /> 
+            <Route path="/Signup" element={<Signup/>} /> 
             <Route path="/Gofortask" element={<Gofortask />} /> 
             <Route path="/Upcoming" element={<Upcoming />} /> 
             <Route path="/Today" element={<Today />} /> 
