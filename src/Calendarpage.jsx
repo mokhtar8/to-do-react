@@ -51,7 +51,7 @@ export default function Calendarpage() {
             </div>
             <div className={styles.sticktag}>
               <img src="🦆 icon _Sticky Note_.svg" alt="Sticky Note" />
-      <p>   <Link className={styles.TasksLink} to='/Sticky Wall'>Sticky Wall</Link></p>  
+      <p>   <Link className={styles.TasksLink} to='/StickyWall'>Sticky Wall</Link></p>  
             </div>
           </li>
           <li className={styles.lists}>

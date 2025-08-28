@@ -6,6 +6,7 @@ import Gofortask from './Gofortask';
 import Upcoming from './upcoming';
 import Today from './Today';
 import Calendarpage from './Calendarpage';
+import Todotask from './Todotask';
 
 
 export default function App() {
@@ -17,12 +18,13 @@ export default function App() {
 
         <Routes>
           <Route path='/' element={<Homep/>} />
-            <Route path="/Sign In" element={<SignIn/>} />
+            <Route path="/SignIn" element={<SignIn/>} />
             <Route path="/Signup" element={<Signup/>} /> 
             <Route path="/Gofortask" element={<Gofortask />} /> 
             <Route path="/Upcoming" element={<Upcoming />} /> 
             <Route path="/Today" element={<Today />} /> 
             <Route path="/Calendarpage" element={<Calendarpage />} /> 
+            <Route path="/Todotask" element={<Todotask />} /> 
    
         </Routes>
     

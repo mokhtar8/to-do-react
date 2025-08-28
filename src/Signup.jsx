@@ -1,5 +1,5 @@
 import styles from "./Signup.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -26,11 +26,17 @@ export default function Signup() {
     }
 
     axios
-      .post("https://strapi.arvanschool.ir/api/auth/local/register", {
-        username: formData.UserName,
+      .post("https://strapi.arvanschool.ir/api/auth/local/register", 
+     {data: {
+       username: formData.UserName,
         email: formData.email,
         password: formData.password,
-      })
+     }  ,},
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+    
+      )
       .then((res) => {
         console.log("ثبت‌نام موفق:", res.data);
         navigate('/Gofortask')
@@ -109,7 +115,7 @@ export default function Signup() {
 
         <p>
           Already have an account?
-          <Link className={styles.signinLink} to="/Sign in">
+          <Link className={styles.signinLink} to="/Signin">
             Sign in
           </Link>
         </p>

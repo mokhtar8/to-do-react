@@ -1,0 +1,308 @@
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Todotask {
+  background-color: #f4f4f4;
+  height: 567px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 870px;
+}
+
+.inputTask {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.inputTitle {
+  position: relative;
+  display: inline-block;
+}
+
+.inputTitle input {
+  border: 2px solid #a78bfa;
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.inputTitle label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: white;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #a78bfa;
+}
+
+.inputDate {
+  position: relative;
+  display: inline-block;
+}
+
+.inputDate input {
+  border: 2px solid #a78bfa;
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.inputDate label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: white;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #a78bfa;
+}
+
+.radioInputs{
+       margin-top: 19px;
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.labelDiv{
+    font-size: 23px;
+}
+
+.subBtn {
+  background-color: #c09dff;
+  width: 200px;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/*menu*/
+
+.openMenu {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  height: 549px;
+  margin-top: 12px;
+  border-radius: 35px;
+  width: 320px;
+  padding: 10px;
+  margin: 0;
+}
+
+.menuh1 {
+  margin: 0;
+}
+
+.searchBar {
+  position: relative;
+  list-style-type: none;
+}
+.menuToggleButtonInside {
+  border: none;
+  background-color: unset;
+  padding: 0;
+  cursor: pointer;
+}
+.MenuTitle {
+  display: flex;
+  gap: 150px;
+  margin-left: 33px;
+  height: 55px;
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+.menuImgbutton {
+  border: none;
+  background-color: unset;
+  bottom: 266px;
+  position: relative;
+  cursor: pointer;
+  right: 139px;
+}
+
+.menuImg {
+  width: 30px;
+}
+
+.searchimg {
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 5px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 72%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.searchInput {
+  height: 35px;
+  box-sizing: border-box;
+  padding-left: 1.5rem;
+  margin-left: 27px;
+  width: 237px;
+  margin-top: 18px;
+  border-radius: 20px;
+  border: none;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.upcomtags {
+  display: flex;
+  align-items: center;
+  margin-left: 58px;
+  gap: 3px;
+}
+
+.todaystag {
+  display: flex;
+  align-items: center;
+  margin-left: 36px;
+  gap: 3px;
+  margin-top: -25px;
+}
+
+.calendartag {
+  display: flex;
+  align-items: center;
+  margin-left: 53px;
+  gap: 3px;
+  margin-top: -25px;
+}
+
+.sticktag {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+  gap: 3px;
+  margin-top: -25px;
+}
+.lists {
+  display: flex;
+  flex-direction: column;
+  margin-left: 57px;
+  gap: 4px;
+}
+.worktag {
+  background-color: rgba(217, 217, 217, 0.2);
+
+  padding-left: 8px;
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.work {
+  background-color: #ff0000;
+  width: 16px;
+  height: 11px;
+  border-radius: 50px;
+}
+
+.Personaltag {
+  background-color: rgba(217, 217, 217, 0.2);
+
+  padding-left: 8px;
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.Personal {
+  background-color: rgba(97, 255, 0, 1);
+  width: 16px;
+  height: 11px;
+  border-radius: 50px;
+}
+
+.Studytag {
+  background-color: rgba(217, 217, 217, 0.2);
+  padding-left: 8px;
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.Study {
+  background-color: rgba(93, 125, 240, 1);
+
+  width: 16px;
+  height: 11px;
+  border-radius: 50px;
+}
+
+.addtag {
+  padding-left: 8px;
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.menuSutUp {
+  padding: 8px;
+  margin: 11px;
+  list-style-type: none;
+}
+
+.settingtag {
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.SignOuttag {
+  width: 184px;
+  height: 29px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.TasksLink {
+  color: black;
+  text-decoration: unset;
+}
