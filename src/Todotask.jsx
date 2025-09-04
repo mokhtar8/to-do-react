@@ -73,92 +73,79 @@ const getData=    axios
       )}
 
       {openMenu && (
-        <ul className={styles.openMenu}>
-          <li className={styles.MenuTitle}>
-            <h1 className={styles.menuh1}>Menu</h1>
-            <button
-              className={styles.menuToggleButtonInside}
-              onClick={toggleMenu}
-            >
-              <img
-                src="align-justify.svg"
-                className={styles.menuImg}
-                alt="menu"
-              />
-            </button>
-          </li>
-          <li className={styles.searchBar}>
-            <img src="search.svg" className={styles.searchimg} alt="search" />
-            <input
-              type="text"
-              placeholder="search..."
-              className={styles.searchInput}
-            />
-          </li>
-          <li className={styles.tasks}>
-            <h3>Tasks</h3>
-            <div className={styles.upcomtags}>
-              <img src="chevrons-right.svg" alt="chevrons-right" />
-              <Link className={styles.TasksLink} to="/Upcoming">
-                <p>Upcoming</p>
-              </Link>
-            </div>
-            <div className={styles.todaystag}>
-              <img src="list.svg" alt="list" />
-              <p>
-                <Link className={styles.TasksLink} to="/Today">
-                  Today
-                </Link>
-              </p>
-            </div>
-            <div className={styles.calendartag}>
-              <img src="calendar.svg" alt="calendar" />
-              <p>
-                <Link className={styles.TasksLink} to="/Calendarpage">
-                  Calendar
-                </Link>
-              </p>
-            </div>
-            <div className={styles.sticktag}>
-              <img src="🦆 icon _Sticky Note_.svg" alt="Sticky Note" />
-              <p>
-                <Link className={styles.TasksLink} to="/Sticky Wall">
-                  Sticky Wall
-                </Link>
-              </p>
-            </div>
-          </li>
-          <li className={styles.lists}>
-            <h3>Lists</h3>
-            <div className={styles.worktag}>
-              <p className={styles.work}></p>
-              <p>Work</p>
-            </div>
-            <div className={styles.Personaltag}>
-              <p className={styles.Personal}></p>
-              <p>Personal</p>
-            </div>
-            <div className={styles.Studytag}>
-              <p className={styles.Study}></p>
-              <p>Study</p>
-            </div>
-            <div className={styles.addtag}>
-              <img src="plus-circle.svg" alt="plus-circle" />
-              <p>Add new list</p>
-            </div>
-          </li>
-          <li className={styles.menuSutUp}>
-            <div className={styles.settingtag}>
-              <img src="align-center.svg" alt="setting" />
-              <p>Settings</p>
-            </div>
-            <div className={styles.SignOuttag}>
-              <img src="log-out.svg" alt="log-out" />
-              <p>Sign Out</p>
-            </div>
-          </li>
-        </ul>
-      )}
+           <ul className={styles.openMenu}>
+             <li className={styles.MenuTitle}>
+              
+            
+               <h1 className={styles.menuh1}>Menu</h1>
+   
+                  <button className={styles.menuToggleButtonInside} onClick={toggleMenu}>
+                 <img src="align-justify.svg" className={styles.menuImg} alt="menu" />
+               
+               </button>
+             </li>
+             <li className={styles.searchBar}>
+               <img src="search.svg" className={styles.searchimg} alt="search" />
+               <input type="text" placeholder="search..." className={styles.searchInput} />
+             </li>
+             <li className={styles.tasks}>
+               <h3>Tasks</h3>
+                 <div className={styles.addtasks}>
+                               <img src="/public/plus-circle2.svg" alt="list" />
+                         <p><Link className={styles.TasksLink} to='/Todotask'>add task</Link></p> 
+                             </div>
+               <div className={styles.upcomtags}>
+                 <img src="chevrons-right.svg" alt="chevrons-right" />
+           <Link className={styles.TasksLink} to='/Upcoming'> <p>  Upcoming</p> </Link> 
+               </div>
+               <div className={styles.todaystag}>
+                 <img src="list.svg" alt="list" />
+           <p><Link className={styles.TasksLink} to='/Today'>Today</Link></p> 
+               </div>
+               <div className={styles.calendartag}>
+                 <img src="calendar.svg" alt="calendar" />
+           <p> <Link className={styles.TasksLink} to='/Calendarpage'>Calendar</Link></p>  
+               </div>
+               <div className={styles.sticktag}>
+                 <img src="🦆 icon _Sticky Note_.svg" alt="Sticky Note" />
+         <p>   <Link className={styles.TasksLink} to='/StickyWall'>Sticky Wall</Link></p>  
+               </div>
+             </li>
+             <li className={styles.lists}>
+               <h3>Lists</h3>
+               <div className={styles.worktag}>
+                 <p className={styles.work}></p>
+                 <p> <Link className={styles.TasksLink} to='/Work'>Work</Link></p>
+               </div>
+               <div className={styles.Personaltag}>
+                 <p className={styles.Personal}></p>
+               
+                 <p> <Link className={styles.TasksLink} to='/Personal'>Personal</Link></p>
+   
+               </div>
+               <div className={styles.Studytag}>
+                 <p className={styles.Study}></p>
+                 
+                 <p> <Link className={styles.TasksLink} to='/Study'>Study</Link></p>
+   
+               </div>
+               <div className={styles.addtag}>
+                 <img src="plus-circle.svg" alt="plus-circle" />
+                 <p>Add new list</p>
+               </div>
+             </li>
+             <li className={styles.menuSutUp}>
+               <div className={styles.settingtag}>
+                 <img src="align-center.svg" alt="setting" />
+                 <p>Settings</p>
+               </div>
+               <div className={styles.SignOuttag}>
+                 <img src="log-out.svg" alt="log-out" />
+                 <p>Sign Out</p>
+               </div>
+             </li>
+           </ul>
+         )}
 
       <form onSubmit={handlerPost} className={styles.Todotask}>
         <div className={styles.inputTask}>

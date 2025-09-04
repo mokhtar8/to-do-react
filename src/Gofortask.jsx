@@ -37,6 +37,10 @@ export default function Gofortask() {
           </li>
           <li className={styles.tasks}>
             <h3>Tasks</h3>
+              <div className={styles.addtasks}>
+                            <img src="/public/plus-circle2.svg" alt="list" />
+                      <p><Link className={styles.TasksLink} to='/Todotask'>add task</Link></p> 
+                          </div>
             <div className={styles.upcomtags}>
               <img src="chevrons-right.svg" alt="chevrons-right" />
         <Link className={styles.TasksLink} to='/Upcoming'> <p>  Upcoming</p> </Link> 
@@ -58,15 +62,19 @@ export default function Gofortask() {
             <h3>Lists</h3>
             <div className={styles.worktag}>
               <p className={styles.work}></p>
-              <p>Work</p>
+              <p> <Link className={styles.TasksLink} to='/Work'>Work</Link></p>
             </div>
             <div className={styles.Personaltag}>
               <p className={styles.Personal}></p>
-              <p>Personal</p>
+            
+              <p> <Link className={styles.TasksLink} to='/Personal'>Personal</Link></p>
+
             </div>
             <div className={styles.Studytag}>
               <p className={styles.Study}></p>
-              <p>Study</p>
+              
+              <p> <Link className={styles.TasksLink} to='/Study'>Study</Link></p>
+
             </div>
             <div className={styles.addtag}>
               <img src="plus-circle.svg" alt="plus-circle" />

@@ -7,6 +7,9 @@ import Upcoming from './upcoming';
 import Today from './Today';
 import Calendarpage from './Calendarpage';
 import Todotask from './Todotask';
+import Work from './Work';
+import Study from './Study';
+import Personal from './Personal';
 
 
 export default function App() {
@@ -25,6 +28,9 @@ export default function App() {
             <Route path="/Today" element={<Today />} /> 
             <Route path="/Calendarpage" element={<Calendarpage />} /> 
             <Route path="/Todotask" element={<Todotask />} /> 
+            <Route path="/Work" element={<Work />} /> 
+            <Route path="/Study" element={<Study />} /> 
+            <Route path="/Personal" element={<Personal />} /> 
    
         </Routes>
     

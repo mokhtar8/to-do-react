@@ -98,7 +98,13 @@ body {
 }
 
 /*menu*/
-
+.addtasks{
+  display: flex;
+  align-items: center;
+    margin-left: 46px;
+    gap: 3px;
+    height: 0;
+}
 .openMenu {
   display: flex;
   align-items: start;
