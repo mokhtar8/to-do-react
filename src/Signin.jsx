@@ -21,14 +21,14 @@ export default function Signin() {
     axios
       .post(
         "https://strapi.arvanschool.ir/api/auth/local",
-     { data: {
-          identifier: formData.identifier,
-          password: formData.password,
-        },} ,
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      )
+     {
+identifier:formData.identifier,
+    password: formData.password,
+  },
+  {
+    headers: { "Content-Type": "application/json" },
+  }
+)
       .then((res) => {
         localStorage.setItem("token", res.data.jwt);
         localStorage.setItem("user", JSON.stringify(res.data.user));

@@ -5,6 +5,8 @@ body {
   justify-content: center;
 }
 
+
+
 .container {
     display: flex
 ;
@@ -167,7 +169,13 @@ display: flex;
     border-radius: 50px;
 }
 
-
+.addtasks{
+  display: flex;
+  align-items: center;
+    margin-left: 46px;
+    gap: 3px;
+    height: 0;
+}
 .Studytag{
     background-color:  rgba(217, 217, 217, 0.2);
     padding-left: 8px;
@@ -224,13 +232,11 @@ display: flex;
     gap: 13px;
 }
 
-.addtasks{
-  display: flex;
-  align-items: center;
-    margin-left: 46px;
-    gap: 3px;
-    height: 0;
+.TasksLink{
+    color: black;
+text-decoration: unset;
 }
+
 
 /*upcoming css*/
 
@@ -255,11 +261,21 @@ border-radius: 30px;
         justify-content: flex-end;
     height: 19vh;
     align-items: flex-end;
-padding-left: 25px;
+padding-left: 9px;
+width: 100%;
+}
+
+.addbox{
+display: flex
+;
+    align-items: center;
+    gap: 11px;   
+     padding: 0;
+    margin: 0;
 }
 
 .h1today{
-    margin-left: 17px;
+       margin: 10px 0 0 20px;
 }
 
 
@@ -296,8 +312,7 @@ text-decoration: unset;
      background-color: #f7f7f7;
     height: 186PX;
     FLOAT: left;
-    margin-bottom: -60px;
-    margin-left: 5%;
+margin: 0 10px -82px 0;
     padding: 1%;
     overflow-y: scroll;
 }
@@ -306,8 +321,8 @@ text-decoration: unset;
      background-color: #f7f7f7;
     height: 186PX;
     FLOAT: left;
-    margin-bottom: -18px;
-    margin-left: 5%;
+margin: 0 10px -45px 0;
+
     padding: 1%;
     overflow-y: scroll;
 }

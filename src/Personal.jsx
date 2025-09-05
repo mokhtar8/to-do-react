@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from "./Work.module.css"; // می‌تونی Personal.module.css بزنی ولی برای تست همینو بزار
+import styles from "./Work.module.css"; 
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
@@ -13,6 +13,8 @@ export default function Personal() {
   const [editedTitle, setEditedTitle] = useState("");
   const [editedType, setEditedType] = useState("");
   const [editedDate, setEditedDate] = useState("");
+
+  const [tasksDone, setTasksDone] = useState({}); // وضعیت Done محلی
 
   const toggleMenu = () => setOpenMenu(!openMenu);
 
@@ -31,8 +33,6 @@ export default function Personal() {
       );
 
       const allTasks = res.data.data || [];
-
-      // فیلتر case-insensitive برای Personal
       const personalTasks = allTasks.filter(task => {
         const t = (task.attributes?.type ?? task.type ?? "").toLowerCase();
         return t.includes("personal");
@@ -40,8 +40,6 @@ export default function Personal() {
 
       setTasks(personalTasks);
       setLoading(false);
-
-      console.log("Personal tasks:", personalTasks);
     } catch (err) {
       console.error("❌ خطا در گرفتن تسک‌ها:", err.message);
       setLoading(false);
@@ -52,6 +50,13 @@ export default function Personal() {
     try {
       await axios.delete(`https://strapi.arvanschool.ir/api/to-dos/${documentId}`);
       getList();
+      // حذف وضعیت Done از localStorage
+      setTasksDone(prev => {
+        const updated = { ...prev };
+        delete updated[documentId];
+        localStorage.setItem("personalTasksDone", JSON.stringify(updated));
+        return updated;
+      });
     } catch (err) {
       console.error("❌ خطا در حذف تسک:", err.message);
     }
@@ -86,12 +91,19 @@ export default function Personal() {
     setSelectedTask(null);
   };
 
+  // بارگذاری وضعیت Done از localStorage
+  useEffect(() => {
+    const storedDone = JSON.parse(localStorage.getItem("personalTasksDone") || "{}");
+    setTasksDone(storedDone);
+  }, []);
+
   useEffect(() => { getList(); }, []);
 
   if (loading) return <p>⏳ در حال بارگذاری...</p>;
 
   return (
     <div className={styles.container}>
+      {/* --- منو --- */}
       {!openMenu && (
         <button className={styles.menuImgbutton} onClick={toggleMenu}>
           <img src="align-justify.svg" className={styles.menuImg} alt="menu" />
@@ -112,10 +124,10 @@ export default function Personal() {
           </li>
           <li className={styles.tasks}>
             <h3>Tasks</h3>
-              <div className={styles.addtasks}>
-                            <img src="/public/plus-circle2.svg" alt="list" />
-                      <p><Link className={styles.TasksLink} to='/Todotask'>add task</Link></p> 
-                          </div>
+            <div className={styles.addtasks}>
+              <img src="/public/plus-circle2.svg" alt="list" />
+              <p><Link className={styles.TasksLink} to='/Todotask'>add task</Link></p> 
+            </div>
             <div className={styles.upcomtags}>
               <img src="chevrons-right.svg" alt="chevrons-right" />
               <Link className={styles.TasksLink} to='/Upcoming'><p>Upcoming</p></Link>
@@ -164,24 +176,37 @@ export default function Personal() {
           </li>
         </ul>
       )}
-      {/* لیست تسک‌های Personal */}
+
+      {/* --- لیست Personal --- */}
       <div className={styles.Upcoming}>
         <h1>Personal Tasks</h1>
         {tasks.length === 0 && <p>تسکی برای Personal وجود ندارد</p>}
-        {tasks.map(task => (
-          <div key={task.documentId} className={styles.taskRow}>
-            <p>
-              {task.attributes?.title ?? task.title} -{" "}
-              {getLocalDate(task.attributes?.dueDate ?? task.dueDate)} -{" "}
-              {task.attributes?.type ?? task.type}
-            </p>
-            <button className={styles.deleteBtn} onClick={() => deleteTask(task.documentId)}>🗑 حذف</button>
-            <button className={styles.editBtn} onClick={() => openEditModal(task)}>✏️ ویرایش</button>
-          </div>
-        ))}
+        {tasks.map(task => {
+          const done = tasksDone[task.documentId] || false;
+          return (
+            <div key={task.documentId} className={styles.taskRow}>
+              <input
+                type="checkbox"
+                checked={done}
+                onChange={(e) => {
+                  const updated = { ...tasksDone, [task.documentId]: e.target.checked };
+                  setTasksDone(updated);
+                  localStorage.setItem("personalTasksDone", JSON.stringify(updated));
+                }}
+              />
+              <p style={{ textDecoration: done ? "line-through" : "none" }}>
+                {task.attributes?.title ?? task.title} -{" "}
+                {getLocalDate(task.attributes?.dueDate ?? task.dueDate)} -{" "}
+                {task.attributes?.type ?? task.type}
+              </p>
+              <button className={styles.deleteBtn} onClick={() => deleteTask(task.documentId)}>🗑 حذف</button>
+              <button className={styles.editBtn} onClick={() => openEditModal(task)}>✏️ ویرایش</button>
+            </div>
+          );
+        })}
       </div>
 
-      {/* مدال ویرایش */}
+      {/* --- مدال ویرایش --- */}
       {isModalOpen && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>

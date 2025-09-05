@@ -26,17 +26,17 @@ export default function Signup() {
     }
 
     axios
-      .post("https://strapi.arvanschool.ir/api/auth/local/register", 
-     {data: {
-       username: formData.UserName,
-        email: formData.email,
-        password: formData.password,
-     }  ,},
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-    
-      )
+   axios.post(
+  "https://strapi.arvanschool.ir/api/auth/local/register",
+  {
+    username: formData.UserName,
+    email: formData.email,
+    password: formData.password,
+  },
+  {
+    headers: { "Content-Type": "application/json" },
+  }
+)
       .then((res) => {
         console.log("ثبت‌نام موفق:", res.data);
         navigate('/Gofortask')
@@ -54,7 +54,6 @@ export default function Signup() {
         );
       });
   };
-
   const handelChange = (e) => {
     e.preventDefault();
 
